@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories moderation | Ember Heart Tribe</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/moderate.css" />
+  </head>
+  <body class="moderate-page">
+    <main class="moderate-shell">
+      <a class="moderate-back" href="/">← Back to Ember Heart Tribe</a>
+      <p class="eyebrow"><span></span> Owner access</p>
+      <h1>Stories<br /><em>moderation.</em></h1>
+      <p class="moderate-intro">Enter the owner token to review or delete stories. The token stays in this page only and is never stored.</p>
+      <form id="moderate-auth" class="moderate-auth">
+        <label for="owner-token">Owner token</label>
+        <input id="owner-token" name="owner-token" type="password" autocomplete="off" required />
+        <button type="submit">Open the board</button>
+      </form>
+      <p id="moderate-status" class="moderate-status" role="status"></p>
+      <button id="moderate-refresh" class="moderate-refresh" type="button" hidden>Refresh stories</button>
+      <section id="moderate-list" class="moderate-list" aria-live="polite"></section>
+    </main>
+    <script src="/moderate.js" defer></script>
+  </body>
+</html>
